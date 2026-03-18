@@ -42,11 +42,47 @@ o	Power (VCC & GND) and appropriate resistors.
 
 ## Program:
 
+```
+ORG 0000H
+	UP: MOV P2, #0C0H
+	ACALL DELAY
+	MOV P2, #0F9H
+	ACALL DELAY
+	MOV P2, #0A4H
+	ACALL DELAY
+	MOV P2, #0B0H
+	ACALL DELAY
+	MOV P2, # 99H
+	ACALL DELAY
+	MOV P2, # 92H
+	ACALL DELAY
+	MOV P2, # 82H
+	ACALL DELAY
+	MOV P2, #0F8H
+	ACALL DELAY
+	MOV P2, #80H 
+	ACALL DELAY
+	MOV P2, #90H
+	ACALL DELAY
+
+
+DELAY: MOV R5, #10
+	H1: MOV R4, #180
+	H2: MOV R3, #255
+	H3:DJNZ R3,H3
+	DJNZ R4,H2
+	DJNZ R5,H1
+	RET
+	END
+
+```
+
 
 ## Output:
+<img width="1917" height="1199" alt="Screenshot 2026-03-18 182615" src="https://github.com/user-attachments/assets/90543d4e-d445-478e-bee8-24b9c4981851" /> 
 
+<img width="1918" height="1199" alt="Screenshot 2026-03-18 182536" src="https://github.com/user-attachments/assets/0d545f23-631d-4c70-9e2c-d5d8a029e5ce" /> 
 
 ## Result:
 The seven-segment display has been successfully interfaced with the 8051 microcontroller, and the digits 0 to 9 are displayed sequentially using Keil and Proteus.
-
 
