@@ -1,4 +1,6 @@
 # Seven-Segment-Display-Interfacing-Using-8051
+# NAME: GOKUL PRASAD H
+# REG NO: 212224050011
 
 ## Aim:
 To interface a seven-segment display with the 8051 microcontroller and display digits 0 to 9 sequentially using an assembly language program in Keil and simulate it in Proteus.
